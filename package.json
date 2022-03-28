@@ -1,6 +1,7 @@
 {
   "name": "a03-hetianyuanjames",
   "version": "0.1.0",
+  "type": "module",
   "description": "Build an API to flip some coins.",
   "main": "server.js",
   "scripts": {
