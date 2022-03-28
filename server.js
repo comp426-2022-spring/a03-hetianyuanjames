@@ -1,4 +1,5 @@
 import { coinFlips, countFlips, coinFlip, flipACoin } from "./modules/coin.mjs";
+import express from 'express';
 
 const express = require('express')
 const app = express()
