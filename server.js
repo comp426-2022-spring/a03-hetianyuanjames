@@ -1,6 +1,6 @@
 import { coinFlips, countFlips, coinFlip, flipACoin } from "./modules/coin.mjs";
 
-const express = require('express')
+const express = import('express')
 const app = express()
 
 var port = 5000
