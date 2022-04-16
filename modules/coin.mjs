@@ -65,7 +65,7 @@ function countFlips(array) {
       head ++;
     else
       tail ++;
-  const count = `{ tails: ${t}, heads: ${h} }` ;
+  const count = `{ tails: ${tail}, heads: ${head} }` ;
   return count;
 }
 
