@@ -32,8 +32,19 @@ app.get('/app/flip/', (req, res) => {
 
 
 app.get('/app/flips/:number', (req, res) => {
-    var flips = coinFlips(req.params.number)
-    res.status(200).json({"raw" : flips, "summary" : countFlips(flips)})
+    var coins = coinFlips(req.params.number)
+
+    var heads = 0
+    var tails = 0
+    for (var i=0; i<coins.length; i++) {
+        if (coins[i].valueOf() == "heads") {
+            heads ++
+        } else {
+            tails ++
+        }
+    }
+
+    res.json({"raw" : coins, "summary" : {"heads" : heads, "tails" : tails}})
 });
 
 app.get('/app/flip/call/heads', (req, res) => {
